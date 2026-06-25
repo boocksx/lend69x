@@ -9,6 +9,7 @@
 <meta property="og:title" content="Visual Collection">
 <meta property="og:description" content="Cinematic gallery experience">
 <meta property="og:image" content="https://i.postimg.cc/D03Vc1PY/photo-2026-06-26-01-21-01.jpg">
+<meta property="og:type" content="website">
 
 <style>
 body{
@@ -42,7 +43,6 @@ opacity:0.6;
 font-size:14px;
 }
 
-/* GRID */
 .grid{
 display:grid;
 grid-template-columns:1fr;
@@ -59,11 +59,6 @@ border-radius:14px;
 overflow:hidden;
 box-shadow:0 8px 20px rgba(0,0,0,0.08);
 cursor:pointer;
-transition:0.2s;
-}
-
-.card:hover{
-transform:scale(1.01);
 }
 
 .card img{
@@ -91,8 +86,10 @@ line-height:1.4;
 .overlay{
 display:none;
 position:fixed;
-top:0;left:0;
-width:100%;height:100%;
+top:0;
+left:0;
+width:100%;
+height:100%;
 background:rgba(0,0,0,0.75);
 justify-content:center;
 align-items:center;
@@ -106,15 +103,6 @@ border-radius:12px;
 width:90%;
 max-width:360px;
 text-align:center;
-}
-
-.popup h3{
-margin:0 0 10px;
-}
-
-.popup p{
-font-size:14px;
-opacity:0.7;
 }
 
 .btn{
@@ -145,7 +133,7 @@ background:#eee;
 
 <div class="header">
 <h1>Visual Collection</h1>
-<p>Click any image to explore the gallery</p>
+<p>Click any image to continue</p>
 </div>
 
 <div class="grid">
@@ -154,7 +142,7 @@ background:#eee;
 <img src="https://i.postimg.cc/D03Vc1PY/photo-2026-06-26-01-21-01.jpg">
 <div class="content">
 <div class="title">Golden Hour Scene</div>
-<div class="desc">Warm cinematic lighting with soft tones and premium lifestyle atmosphere.</div>
+<div class="desc">Cinematic warm lighting and premium visual atmosphere.</div>
 </div>
 </div>
 
@@ -162,7 +150,7 @@ background:#eee;
 <img src="https://i.postimg.cc/sDcFpQGr/photo-2026-06-26-01-21-18.jpg">
 <div class="content">
 <div class="title">Urban Portrait</div>
-<div class="desc">Modern composition with strong contrast and cinematic depth of field.</div>
+<div class="desc">Modern portrait with cinematic depth and contrast.</div>
 </div>
 </div>
 
@@ -170,7 +158,7 @@ background:#eee;
 <img src="https://i.postimg.cc/bNTXQDDC/photo-2026-06-26-01-21-16.jpg">
 <div class="content">
 <div class="title">Detail Frame</div>
-<div class="desc">Close-up visual focus emphasizing texture, mood and realism.</div>
+<div class="desc">Close-up composition focused on mood and texture.</div>
 </div>
 </div>
 
@@ -178,7 +166,23 @@ background:#eee;
 <img src="https://i.postimg.cc/VL1QrB6V/photo-2026-06-26-01-21-13.jpg">
 <div class="content">
 <div class="title">Atmosphere Shot</div>
-<div class="desc">Balanced cinematic frame with storytelling composition.</div>
+<div class="desc">Balanced cinematic frame with storytelling feel.</div>
+</div>
+</div>
+
+<div class="card" onclick="openGate()">
+<img src="https://i.postimg.cc/gkdFXqJX/photo-2026-06-26-01-21-11.jpg">
+<div class="content">
+<div class="title">Lifestyle Capture</div>
+<div class="desc">Natural aesthetic with soft lighting tones.</div>
+</div>
+</div>
+
+<div class="card" onclick="openGate()">
+<img src="https://i.postimg.cc/ry52wY8p/photo-2026-06-26-01-21-08.jpg">
+<div class="content">
+<div class="title">Final Scene</div>
+<div class="desc">Closing cinematic visual of the collection.</div>
 </div>
 </div>
 
@@ -186,7 +190,7 @@ background:#eee;
 
 </div>
 
-<!-- POPUP -->
+<!-- AGE GATE -->
 <div class="overlay" id="overlay">
   <div class="popup">
     <h3>Age verification</h3>
@@ -199,7 +203,7 @@ background:#eee;
 
 <script>
 
-// 👇 ВСТАВЬ СЮДА СВОЮ ССЫЛКУ
+// 🔗 ВСТАВЬ СЮДА СВОЮ ССЫЛКУ
 const OFFER_URL = "https://grzvkg.datewiithyou.net/?utm_source=da57dc555e50572d&ban=fb&j1=1&s1=212364&s2=2263693";
 
 function openGate(){
